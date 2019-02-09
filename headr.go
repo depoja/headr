@@ -25,7 +25,7 @@ func New(h http.Handler) *Headr {
 
 // Set adds header entries with the given key to the HTTP handler decorator
 func (h *Headr) Set(key string, values []string) {
-	value := strings.Join(values, ",")
+	value := strings.Join(values, ", ")
 	header := []string{key, value}
 	h.headers = append(h.headers, header)
 }
